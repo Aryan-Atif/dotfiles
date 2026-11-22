@@ -1,0 +1,137 @@
+@import "colorschemes/everforest.css";
+
+/* ─── Global ───────────────────────────────────────────── */
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free";
+    font-size: 13px;
+    min-height: 0;
+}
+
+#window {
+  background: transparent;
+  border-radius: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+window#waybar {
+    background:  @base;
+    color: @color8;
+}
+
+tooltip {
+  background: @base;
+  border-color: @crust;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#backlight,
+#cpu,
+#custom-swaync,
+#memory,
+#network,
+#pulseaudio,
+#tray,
+#clock,
+#window,
+#mpris,
+#workspaces {
+  background: @crust;
+  border-radius: 8px;
+  border: 1px solid @crust;
+  font-weight: 400;
+  margin: 3px 0 3px 0;
+  padding: 3px 10px;
+}
+
+#tray {
+  margin-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* ─── Workspaces ───────────────────────────────────────── */
+#workspaces {
+  font-weight: Bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+#workspaces :nth-child(5) {
+  margin-right: 0px;
+}
+#workspaces button {
+  border-radius: 6px;
+  color: @color9;
+  padding: 3px;
+  margin-right: 5px;
+}
+
+#workspaces button.active {
+  background: @color2;
+  color: @color8;
+}
+
+#workspaces button.focused {
+  background: @color7;
+  color: @color8;
+}
+
+#workspaces button.urgent {
+  background: @color4;
+  color: @color8;
+}
+
+#workspaces button:hover {
+  background: @crust;
+  color: @color7;
+}
+
+/* ─── Modules ──────────────────────────────────────────── */
+#clock, #network, #battery, #wireplumber {
+    padding: 0 10px;
+}
+
+/* For battery
+// ─── Battery States ───────────────────────────────────── 
+#battery.warning {
+    color: #fabd2f;
+}
+
+#battery{
+  color: #fabd2f
+}
+
+#battery.critical {
+    color: #fb4934;
+} 
+*/
+/* ─── Volume / Network Highlights ───────────────────────── */
+#wireplumber {
+  border-left: 0px;
+  border-right: 0px;
+  color: @color5;
+  margin-right: 10px;
+}
+
+#network {
+  color: @color3;
+  margin-right: 10px;
+}
+
+/* ─── Center clock ─────────────────────────────────────── */
+#clock {
+  border-right: 0px;
+  color: @color6;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+#mpris {
+  color: @color7;
+  margin-left: 10px;
+}

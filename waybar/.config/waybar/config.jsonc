@@ -1,0 +1,65 @@
+{    
+    "layer": "top",
+    "position": "top",
+    "height": 0,
+    "mod": "dock",
+    "exclusive": true,
+    "passtrough": false,
+
+    /* Uncomment this if you're using hyprland 
+    "modules-left": ["hyprland/workspaces"],*/
+    /* Comment this if you're using hyprland */
+    "modules-left": ["sway/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["wireplumber", "mpris", "network", "battery",],
+
+    "clock": {
+        "format": "󰥔 {:%H:%M}",
+        "tooltip-format": "{:%A, %B %d %Y}"
+    },
+
+  /* Uncomment this if you need the battery
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "states": {
+            "warning": 25,
+            "critical": 10
+        }
+    },*/
+  "sway/workspaces": {
+    "on-click": "activate",
+  },
+    "mpris": {
+
+        "format": "{player_icon} {title} | {artist} - {length}",
+        "format-paused": "{status_icon} <i>{title} | {artist} - {length}</i>",
+        "player-icons": {
+            "default": "▶"
+        },
+        "status-icons": {
+            "paused": "󰏤"
+        },
+      "max-length": 25
+    },  
+
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "󰤨   {essid} {bandwidthTotalBytes}",
+        "format-ethernet": "󱓞 {bandwidthTotalBytes}",
+        "format-disconnected": "󰤭 ",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "󰤢   Signal Strength:  {signalStrength}%",
+        "tooltip-format-ethernet": "󰊗   Signal Strength:  {signalStrength}%",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "interval": 5
+    },
+
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-icons": ["", "", ""]
+    }
+}
+},
+
